@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-carrito',
+  templateUrl: './carrito.component.html',
+  styleUrls: ['./carrito.component.scss']
+})
+export class CarritoComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  escucho(event){
+
+    alert('Acabo recicbir evento del card fruta=' + event);
+  }
+
+}

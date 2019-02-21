@@ -1,0 +1,35 @@
+
+
+<div class="row">
+  <div class="col-md-6">
+    <h1 class="text-primary">Pipes o Filtros</h1>
+    <h2>Pipes disponibles en Angular</h2>
+    <a href="https://angular.io/api?type=pipe">Documentacion API</a><br>
+    <a href="https://angular.io/guide/pipes">Documentacion sobre pipes (inglés)</a><br><br>
+
+    <p>Ejemplo sin pipe: <b>{{nombre}}</b></p>
+    <p>Ejemplo con pipe de lowercase: <b>{{nombre | lowercase}}</b></p>
+    <p>Ejemplo con pipe de uppercase: <b>{{nombre | uppercase}}</b></p>
+    <p>Ejemplo con pipe de titlecase: <b>{{nombre | titlecase}}</b></p><br><br>
+    
+    <p>Numero sin pipe: <b>{{numero}}</b></p>
+    <p>Nukero con pipe: <b>{{numero | number : '1.0-2'}}</b></p>
+    <p>Nukero con pipe: <b>{{numero | number : '1.0-4'}}</b></p>
+    <p>Nukero con pipe: <b>{{numero | number : '2.0-2'}}</b></p>
+
+  </div>
+  
+  <div class="col-md-6">
+    <h2>Pipes creados por nosotros</h2>
+  
+    <p><b>{{numero}}</b></p>
+    <p>Moneda con pipe: <b>{{numero | moneda : 'eu'}}</b> pasandole el argumento 'eu'</p>
+    <p>Moneda con pipe: <b>{{numero | moneda : 'us'}}</b> pasandole el argumento 'us'</p>
+
+    <p>En la <b>frase</b> sin pipe hacer debug para ver el cambio puesto que HTML quita los espacios por defecto.</p>
+    <p>Frase sin pipe: <b>{{frase}}</b></p>
+    <p>Frase con pipe: <b>{{frase | espacios}}</b></p>
+  </div>
+  
+
+</div>

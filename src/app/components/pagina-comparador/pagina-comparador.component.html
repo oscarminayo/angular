@@ -1,0 +1,35 @@
+<div class="row">
+
+  <div class="col mt-4">
+      <ul class="list-group">
+        <li *ngFor="let f of frutas;let i = index" 
+            (click)="cambiarFruta(i)"
+            class="list-group-item {{(f.nombre===frutaSelec1.nombre||f.nombre===frutaSelec2.nombre)?'active':''}}">{{f.nombre | uppercase}}</li>         
+      </ul>
+
+      <p>frutaSelec1 => {{frutaSelec1.nombre}}</p>
+      <p>frutaSelec2 => {{frutaSelec2.nombre}}</p>
+
+  </div>
+  <div class="col mt-4">
+      <app-card-fruta (llamarCarrito)="escucho($event)" [fruta]="frutaSelec1" [frutaComparar]="frutaSelec2"></app-card-fruta>
+  </div>
+  <div class="col mt-4">
+      <app-card-fruta (llamarCarrito)="escucho($event)" [fruta]="frutaSelec2" [frutaComparar]="frutaSelec1" ></app-card-fruta>
+  </div>
+
+
+  <div class="col mt-4">
+      <h4>Carrito de compra</h4>
+      <p *ngIf="carrito.length==0">No hay ningun producto todavia.</p>
+        <ul class="list-group">
+                <li class="list-group-item" *ngFor="let frutacarrito of carrito">
+                    {{frutacarrito.nombre}} <button class="btn btn-danger" (click)="eliminarFrutaCarrito(frutacarrito)">Eliminar</button>
+                </li>       
+        </ul>
+        <p>Total <b>{{totalCarro}}</b></p>
+        
+  </div>
+
+  
+</div>

@@ -1,0 +1,25 @@
+/* estilos propios del componente */
+
+div{
+    background:grey;
+    padding: 1 em;
+
+    p{
+        color: white;
+    }
+
+    button{
+        color:white;
+        font-weight: bold;
+        font-size:50px;
+    }
+
+    span{
+        font-size:50px;
+        display:block;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color:pink;
+    }
+}
+    

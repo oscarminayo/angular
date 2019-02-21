@@ -1,0 +1,32 @@
+<h1 class="text-primary">Flujo de la informacion de la vista al modelo...</h1>
+<p>*Para mas detalle leer manual de angular en pdf (pagina 37)</p>
+
+<img src="assets/imgs/flujo informacion angular.png" alt = "flujo informacion en angular">
+
+<h2>Expresion &#123; &#123; &#125; &#125;</h2>
+<p>{{expresion}}</p>
+
+<h2>Propiedades</h2>
+<h3 [class]="claseModelo">HIDDEN</h3>
+<p [hidden]="!ocultar">Este se ve</p>
+<p [hidden]="ocultar">Este se oculta</p>
+
+
+<div class="mt-4">
+  <p>Pulsa para cambiar color titulo</p>
+
+  <input type="radio" name="color" value="text-primary" (change)="changeClass('text-primary')">Azul<br>
+  <input type="radio" name="color" value="text-warning" (change)="changeClass('text-warning')">Amarillo<br>
+  <input type="radio" name="color" value="text-danger" (change)="changeClass('text-danger')">Rojo<br>
+  <input type="radio" name="color" value="text-primary">Morado TODO<br>
+
+  <h2>Doble binding o banana in a box</h2>
+
+  <p>Tu nombre es: <b>{{nombre}}</b></p>
+  <input type="text" [(ngModel)]="nombre" placeholder="escribe tu nombre minimo 3 letras" 
+   (click)="borrar()" class="form-control {{(nombre.length < 3)?'is-invalid':'is-valid'}}">
+  <p>CUIDADO, hay que importar FormsModule en app.module.ts para que funcione</p>
+  <!--Para que funcione lo del banana in a box este hay que importar FormsModule en imports de app.module.tss-->
+</div>
+
+

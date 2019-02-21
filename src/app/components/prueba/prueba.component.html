@@ -1,0 +1,14 @@
+<div>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit debitis ut ipsa, in ab doloremque nulla vel animi, expedita eius ducimus nobis quam corporis similique quidem repellendus dicta tempore et.</p>
+  
+  
+  <span [appCountdown]="tiempo">{{tiempo}}</span>
+  <span>{{contador}}</span>
+  <button class = "btn btn-success" id = "botonsumar" (click)="sumar()" disabled="{{(tiempo > 0)?'':'disabled'}}">DALE SIN MIEDO CABROOOOON</button>
+  <button class = "btn btn-primary" id = "botoncrono" (click)="cronometro()" disabled ="{{(tiempo == 10)?'':'disabled'}}">{{(tiempo==10)?'TIEMPOOOOOOOOO':'JUGANDOOOOOOO'}}</button>
+
+  <!-- <button *ngIf="tiempo==0" (click)="restart()">Nueva Partida</button> -->
+
+  
+
+</div>
